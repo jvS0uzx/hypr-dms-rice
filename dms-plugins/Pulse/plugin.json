@@ -1,0 +1,12 @@
+{
+  "id": "pulse",
+  "name": "Pulso",
+  "description": "Uma pílula com o pior estado de todos os monitores do ricestat",
+  "version": "0.1.0",
+  "author": "jvS0uzx",
+  "type": "widget",
+  "icon": "monitor_heart",
+  "component": "./PulseWidget.qml",
+  "requires_dms": ">=1.6.0",
+  "permissions": ["settings_read", "settings_write", "process"]
+}

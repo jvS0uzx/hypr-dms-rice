@@ -1,0 +1,6 @@
+# Repositórios cujo último deploy o ricestat acompanha. Um "owner/repo" por
+# linha; o workflow lido é .github/workflows/deploy.yml. Precisa do `gh`
+# autenticado com leitura nesses repositórios.
+# Instalado em ~/.config/ricestat/repos.txt pelo install.sh (só se não existir).
+#minha-org/api
+#minha-org/site

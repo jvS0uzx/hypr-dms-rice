@@ -1,0 +1,55 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+
+    // O logo não vem daqui: o fastfetch 2.68 não tem logo.type "command", então
+    // o wrapper ff.sh gera a arte e passa como --logo-type data-raw.
+    "logo": {
+        "padding": { "top": 1, "right": 3 }
+    },
+
+    "display": {
+        "separator": "  ",
+        "constants": [
+            "─────────────────────────────"
+        ]
+    },
+
+    "modules": [
+        "break",
+        { "type": "title", "format": "{user-name}@{host-name}" },
+        { "type": "custom", "format": "{$1}" },
+
+        { "type": "os",        "key": "  sistema", "format": "{name} {version}" },
+        { "type": "kernel",    "key": "  kernel " },
+        { "type": "packages",  "key": "  pacotes" },
+        { "type": "uptime",    "key": "  ligado " },
+
+        { "type": "custom", "format": "{$1}" },
+
+        { "type": "wm",        "key": "  wm     ", "format": "{pretty-name}" },
+        { "type": "terminal",  "key": "  term   " },
+        { "type": "shell",     "key": "  shell  " },
+        { "type": "theme",     "key": "  tema   " },
+
+        { "type": "custom", "format": "{$1}" },
+
+        { "type": "cpu",       "key": "  cpu    ", "format": "{name} ({cores-logical}) @ {freq-max}" },
+        { "type": "gpu",       "key": "  gpu    ", "format": "{name}" },
+        { "type": "memory",    "key": "  ram    " },
+        { "type": "disk",      "key": "  disco  ", "folders": "/" },
+        { "type": "battery",   "key": "  bateria" },
+
+        { "type": "custom", "format": "{$1}" },
+
+        // A linha que justifica abrir um terminal: estado da máquina de
+        // desenvolvimento, não enfeite.
+        { "type": "command", "key": "  docker ", "text": "~/.config/fastfetch/devinfo.sh docker" },
+        { "type": "command", "key": "  deploys", "text": "~/.config/fastfetch/devinfo.sh deploys" },
+        { "type": "command", "key": "  frota  ", "text": "~/.config/fastfetch/devinfo.sh frota" },
+        { "type": "command", "key": "  agents ", "text": "~/.config/fastfetch/devinfo.sh agents" },
+
+        "break",
+        { "type": "colors", "symbol": "circle" },
+        "break"
+    ]
+}

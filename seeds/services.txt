@@ -1,0 +1,7 @@
+# Sites checados pelo ricestat. Um domínio por linha.
+#
+# GET HTTPS na raiz a cada 60s: status, latência e dias até o certificado
+# vencer. Somente leitura — o mesmo que abrir a página no navegador.
+# Instalado em ~/.config/ricestat/services.txt pelo install.sh (só se não existir).
+#exemplo.com.br
+#app.exemplo.com.br

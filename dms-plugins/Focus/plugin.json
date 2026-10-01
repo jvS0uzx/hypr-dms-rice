@@ -1,0 +1,16 @@
+{
+  "id": "focus",
+  "name": "Focus",
+  "description": "Tempo por projeto, amostrado da janela ativa do Hyprland",
+  "version": "0.1.0",
+  "author": "jvS0uzx",
+  "type": "composite",
+  "icon": "center_focus_strong",
+  "components": {
+    "widget": "./FocusBar.qml",
+    "desktop": "./FocusDesktop.qml"
+  },
+  "settings": "./FocusSettings.qml",
+  "requires_dms": ">=1.6.0",
+  "permissions": ["settings_read", "settings_write"]
+}

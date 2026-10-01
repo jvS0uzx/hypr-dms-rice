@@ -1,0 +1,33 @@
+# Configuração de git compartilhada. A identidade continua no ~/.gitconfig, que
+# não é versionado — este arquivo é só comportamento de ferramenta.
+[core]
+	pager = delta
+
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+	navigate = true
+	line-numbers = true
+	side-by-side = false
+	hyperlinks = true
+	syntax-theme = base16-256
+
+[merge]
+	conflictstyle = zdiff3
+
+[diff]
+	colorMoved = default
+	algorithm = histogram
+
+[rebase]
+	autosquash = true
+	autostash = true
+
+[push]
+	default = current
+
+# O acidente de 10/09 no vault: `git add -A` levou junto arquivos não
+# relacionados. Isto não impede, mas deixa o que está fora do índice visível.
+[status]
+	showUntrackedFiles = all

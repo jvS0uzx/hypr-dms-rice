@@ -1,0 +1,22 @@
+# GERADO PELO MATUGEN — carregado junto do config.yml via LG_CONFIG_FILE.
+gui:
+  theme:
+    activeBorderColor:
+      - "{{colors.primary.default.hex}}"
+      - bold
+    inactiveBorderColor:
+      - "{{colors.outline.default.hex}}"
+    searchingActiveBorderColor:
+      - "{{colors.secondary.default.hex}}"
+    optionsTextColor:
+      - "{{colors.on_surface_variant.default.hex}}"
+    selectedLineBgColor:
+      - "{{colors.surface_container_high.default.hex}}"
+    cherryPickedCommitBgColor:
+      - "{{colors.secondary_container.default.hex}}"
+    cherryPickedCommitFgColor:
+      - "{{colors.primary.default.hex}}"
+    unstagedChangesColor:
+      - "{{colors.error.default.hex}}"
+    defaultFgColor:
+      - "{{colors.on_surface.default.hex}}"

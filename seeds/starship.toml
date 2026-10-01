@@ -1,0 +1,68 @@
+# GERADO PELO MATUGEN — fonte: ~/.config/matugen/templates/starship-palette.toml
+# Starship não suporta include, então o template carrega o prompt inteiro.
+add_newline = true
+palette = "matugen"
+
+format = """
+[](fg:accent)[ $os$username ](bg:accent fg:on_accent)[](fg:accent bg:surface)\
+[ $directory ](bg:surface fg:fg)[](fg:surface)\
+$git_branch$git_status
+$character"""
+
+[palettes.matugen]
+accent    = "#8ab4f8"
+on_accent = "#0d1117"
+accent2   = "#81c995"
+muted     = "#9aa0a6"
+surface   = "#1f2329"
+fg        = "#e8eaed"
+error     = "#f28b82"
+
+[os]
+disabled = false
+format = "[$symbol]($style)"
+style = "bg:accent fg:on_accent"
+[os.symbols]
+Arch = "󰣇"
+
+[username]
+show_always = true
+format = "[$user]($style)"
+style_user = "bg:accent fg:on_accent"
+style_root = "bg:error fg:on_accent"
+
+[directory]
+format = "[$path]($style)[$read_only]($read_only_style)"
+style = "bg:surface fg:fg"
+read_only = " 󰌾"
+truncation_length = 3
+truncate_to_repo = true
+[directory.substitutions]
+"Documentos" = "󰈙"
+"Codes" = "󰲋"
+"Imagens" = "󰋩"
+
+[git_branch]
+format = " [ $branch]($style)"
+style = "fg:accent2"
+
+[git_status]
+format = "[$all_status$ahead_behind]($style)"
+style = "fg:error"
+conflicted = " ="
+ahead = " ⇡${count}"
+behind = " ⇣${count}"
+diverged = " ⇕"
+untracked = " ?${count}"
+stashed = " "
+modified = " !${count}"
+staged = " +${count}"
+
+[character]
+success_symbol = "[❯](bold fg:accent)"
+error_symbol = "[❯](bold fg:error)"
+
+[cmd_duration]
+min_time = 2000
+format = " [ $duration]($style)"
+style = "fg:muted"

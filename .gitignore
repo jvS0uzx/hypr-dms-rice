@@ -1,0 +1,6 @@
+# nada de segredo no repositório de dotfiles
+*.key
+*.pem
+.env
+*_history
+.cache/

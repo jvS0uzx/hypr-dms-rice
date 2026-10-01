@@ -1,0 +1,16 @@
+{
+  "id": "agentMeter",
+  "name": "Agent Meter",
+  "description": "Custo e sessões ativas dos agents CLI, lidos do ricestat",
+  "version": "0.1.0",
+  "author": "jvS0uzx",
+  "type": "composite",
+  "icon": "smart_toy",
+  "components": {
+    "widget": "./AgentBarWidget.qml",
+    "desktop": "./AgentDesktopWidget.qml"
+  },
+  "settings": "./AgentSettings.qml",
+  "requires_dms": ">=1.6.0",
+  "permissions": ["settings_read", "settings_write"]
+}

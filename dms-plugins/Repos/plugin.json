@@ -1,0 +1,16 @@
+{
+  "id": "repos",
+  "name": "Repos",
+  "description": "Trabalho não commitado, commit sem push e branch fora da principal nos repositórios locais",
+  "version": "0.1.0",
+  "author": "jvS0uzx",
+  "type": "composite",
+  "icon": "commit",
+  "components": {
+    "widget": "./ReposBar.qml",
+    "desktop": "./ReposDesktop.qml"
+  },
+  "settings": "./ReposSettings.qml",
+  "requires_dms": ">=1.6.0",
+  "permissions": ["settings_read", "settings_write"]
+}

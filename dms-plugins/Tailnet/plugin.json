@@ -1,0 +1,13 @@
+{
+  "id": "tailnet",
+  "name": "Tailnet",
+  "description": "Nós da tailnet online e offline, lidos do ricestat",
+  "version": "0.1.0",
+  "author": "jvS0uzx",
+  "type": "widget",
+  "icon": "lan",
+  "component": "./TailnetWidget.qml",
+  "settings": "./TailnetSettings.qml",
+  "requires_dms": ">=1.6.0",
+  "permissions": ["settings_read", "settings_write"]
+}

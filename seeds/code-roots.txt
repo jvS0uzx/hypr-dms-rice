@@ -1,0 +1,5 @@
+# Pastas onde o ricestat procura repositórios git locais (sujos, à frente ou
+# atrás do origin). Uma por linha; ~ vale a pasta pessoal.
+# Sem este arquivo, o ricestat tenta ~/code, ~/projects, ~/src, ~/dev e ~/dotfiles.
+~/code
+~/dotfiles

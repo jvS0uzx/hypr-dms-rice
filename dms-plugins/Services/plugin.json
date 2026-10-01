@@ -1,0 +1,12 @@
+{
+  "id": "services",
+  "name": "Serviços",
+  "description": "HTTP e validade TLS dos domínios de produção, lidos do ricestat",
+  "version": "0.1.0",
+  "author": "jvS0uzx",
+  "type": "desktop",
+  "icon": "public",
+  "component": "./ServicesDesktop.qml",
+  "requires_dms": ">=1.6.0",
+  "permissions": ["settings_read", "settings_write"]
+}

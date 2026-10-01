@@ -1,0 +1,41 @@
+[config]
+reload_apps = true
+
+# Hyprland — bordas e sombras seguem o accent do wallpaper.
+[templates.hyprland]
+# Módulo Lua: o Hyprland lê a configuração em Lua desde 01/10/2026.
+input_path  = '~/.config/matugen/templates/hypr-colors.lua'
+output_path = '~/.config/hypr/colors.lua'
+
+[templates.hyprlock]
+input_path  = '~/.config/matugen/templates/hyprlock-colors.conf'
+output_path = '~/.config/hypr/hyprlock-colors.conf'
+
+[templates.kitty]
+input_path  = '~/.config/matugen/templates/kitty-colors.conf'
+output_path = '~/.config/kitty/colors.conf'
+post_hook   = 'pidof kitty >/dev/null && kill -SIGUSR1 $(pidof kitty) || true'
+
+[templates.fuzzel]
+input_path  = '~/.config/matugen/templates/fuzzel.ini'
+output_path = '~/.config/fuzzel/fuzzel.ini'
+
+[templates.gtk3]
+input_path  = '~/.config/matugen/templates/gtk-colors.css'
+output_path = '~/.config/gtk-3.0/gtk.css'
+
+[templates.gtk4]
+input_path  = '~/.config/matugen/templates/gtk-colors.css'
+output_path = '~/.config/gtk-4.0/gtk.css'
+
+[templates.starship]
+input_path  = '~/.config/matugen/templates/starship-palette.toml'
+output_path = '~/.config/starship.toml'
+
+[templates.zellij]
+input_path  = '~/.config/matugen/templates/zellij-theme.kdl'
+output_path = '~/.config/zellij/themes/matugen.kdl'
+
+[templates.lazygit]
+input_path  = '~/.config/matugen/templates/lazygit-theme.yml'
+output_path = '~/.config/lazygit/theme.yml'

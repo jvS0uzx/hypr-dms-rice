@@ -1,0 +1,16 @@
+// GERADO PELO MATUGEN
+themes {
+    matugen {
+        fg "{{colors.on_surface.default.hex}}"
+        bg "{{colors.surface.default.hex}}"
+        black "{{colors.surface_container_low.default.hex}}"
+        red "{{colors.error.default.hex}}"
+        green "{{colors.tertiary.default.hex}}"
+        yellow "{{colors.secondary.default.hex}}"
+        blue "{{colors.primary.default.hex}}"
+        magenta "{{colors.tertiary_container.default.hex}}"
+        cyan "{{colors.secondary_container.default.hex}}"
+        white "{{colors.on_surface.default.hex}}"
+        orange "{{colors.secondary.default.hex}}"
+    }
+}

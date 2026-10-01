@@ -1,0 +1,16 @@
+[Unit]
+Description=ricestat — coletor de métricas do rice
+# Não depende de graphical-session.target de propósito: o coletor só lê
+# arquivo e roda CLI, não toca em display. Amarrado ao alvo gráfico, ele morria
+# toda vez que o target piscava — foi o que aconteceu em 29/09.
+After=network-online.target
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/ricestat --interval 15s
+Restart=always
+RestartSec=10
+Nice=10
+
+[Install]
+WantedBy=default.target

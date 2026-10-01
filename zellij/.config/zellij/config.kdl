@@ -1,0 +1,39 @@
+// Zellij existe aqui por um motivo específico: comando em produção não pode
+// morrer com a queda do SSH. O resto é conforto.
+
+theme "matugen"
+default_layout "compact"
+pane_frames false
+copy_on_select true
+mouse_mode true
+scroll_buffer_size 20000
+
+// Ctrl+a em vez do Ctrl+g padrão: é o que a mão já sabe de tmux.
+keybinds clear-defaults=true {
+    normal {
+        bind "Ctrl a" { SwitchToMode "tmux"; }
+    }
+    tmux {
+        bind "Ctrl a" { Write 1; SwitchToMode "normal"; }
+        bind "Esc" { SwitchToMode "normal"; }
+        bind "c" { NewTab; SwitchToMode "normal"; }
+        bind "x" { CloseFocus; SwitchToMode "normal"; }
+        bind "|" { NewPane "Right"; SwitchToMode "normal"; }
+        bind "-" { NewPane "Down"; SwitchToMode "normal"; }
+        bind "d" { Detach; }
+        bind "n" { GoToNextTab; SwitchToMode "normal"; }
+        bind "p" { GoToPreviousTab; SwitchToMode "normal"; }
+        bind "h" { MoveFocus "Left"; SwitchToMode "normal"; }
+        bind "j" { MoveFocus "Down"; SwitchToMode "normal"; }
+        bind "k" { MoveFocus "Up"; SwitchToMode "normal"; }
+        bind "l" { MoveFocus "Right"; SwitchToMode "normal"; }
+        bind "z" { ToggleFocusFullscreen; SwitchToMode "normal"; }
+        bind "[" { SwitchToMode "scroll"; }
+    }
+    scroll {
+        bind "Esc" "q" { SwitchToMode "normal"; }
+    }
+    shared_except "normal" {
+        bind "Ctrl c" { SwitchToMode "normal"; }
+    }
+}

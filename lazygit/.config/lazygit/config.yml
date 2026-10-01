@@ -1,0 +1,28 @@
+gui:
+  nerdFontsVersion: "3"
+  showFileTree: true
+  showCommandLog: false
+  sidePanelWidth: 0.3
+  mainPanelSplitMode: flexible
+  timeFormat: "02/01 15:04"
+  language: pt
+
+git:
+  paging:
+    colorArg: always
+    pager: delta --dark --paging=never
+  commit:
+    signOff: false
+  autoFetch: true
+  autoRefresh: true
+  # Empurrar em main dispara deploy nas VPS. O lazygit não deve ter um caminho
+  # de uma tecla só para isso.
+  disableForcePushing: true
+
+confirmOnQuit: false
+promptToReturnFromSubprocess: false
+
+keybinding:
+  universal:
+    quit: "q"
+    return: "<esc>"

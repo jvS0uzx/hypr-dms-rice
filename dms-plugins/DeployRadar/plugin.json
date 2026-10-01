@@ -1,0 +1,20 @@
+{
+  "id": "deployRadar",
+  "name": "Deploy Radar",
+  "description": "Último deploy de cada repositório com deploy.yml, lido do ricestat",
+  "version": "0.1.0",
+  "author": "jvS0uzx",
+  "type": "composite",
+  "icon": "rocket_launch",
+  "components": {
+    "widget": "./DeployRadarWidget.qml",
+    "desktop": "./DeployRadarDesktop.qml"
+  },
+  "settings": "./DeployRadarSettings.qml",
+  "requires_dms": ">=1.6.0",
+  "permissions": [
+    "settings_read",
+    "settings_write",
+    "process"
+  ]
+}

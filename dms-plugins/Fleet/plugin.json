@@ -1,0 +1,16 @@
+{
+  "id": "fleet",
+  "name": "Fleet",
+  "description": "Uso das máquinas e estado dos bancos, local e nas VPS",
+  "version": "0.1.0",
+  "author": "jvS0uzx",
+  "type": "composite",
+  "icon": "dns",
+  "components": {
+    "widget": "./FleetBar.qml",
+    "desktop": "./FleetDesktop.qml"
+  },
+  "settings": "./FleetSettings.qml",
+  "requires_dms": ">=1.6.0",
+  "permissions": ["settings_read", "settings_write"]
+}

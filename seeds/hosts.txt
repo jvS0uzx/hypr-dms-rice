@@ -1,0 +1,19 @@
+# Máquinas monitoradas pelo ricestat. Formato: <apelido> <papel> <destino ssh|local>
+#
+# O probe é SOMENTE LEITURA: lê /proc, df, docker ps e faz uma consulta de
+# contagem por banco. Não escreve nada.
+#
+# Custo em tráfego, medido: ~180 bytes de resposta por host por coleta, com
+# intervalo de 60s. O SSH usa ControlMaster/ControlPersist=300, então o
+# handshake — que é a parte cara — acontece uma vez a cada 5 minutos, não a
+# cada coleta. Quatro VPS dão menos de 1 MB por dia, por dentro da Tailscale.
+#
+# Para desligar um host, comente a linha. Para desligar tudo, comente todas.
+
+local    estacao   local
+
+# Servidores remotos (de preferência por VPN/Tailscale, não pelo IP público).
+# Descomente e ajuste. Confira antes que `ssh <destino> true` funciona sem
+# senha, senão o coletor só vai registrar erro.
+#web1     node      deploy@10.0.0.11
+#db1      estado    deploy@10.0.0.20

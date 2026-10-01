@@ -1,0 +1,12 @@
+{
+  "id": "pending",
+  "name": "Pendências",
+  "description": "O que tem prazo ou está parado: chaves, inbox, deploys, certificados, disco",
+  "version": "0.1.0",
+  "author": "jvS0uzx",
+  "type": "desktop",
+  "icon": "checklist",
+  "component": "./PendingDesktop.qml",
+  "requires_dms": ">=1.6.0",
+  "permissions": ["settings_read", "settings_write"]
+}
