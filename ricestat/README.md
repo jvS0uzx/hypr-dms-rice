@@ -36,7 +36,7 @@ systemctl --user status ricestat
 | `deploys` | `gh run list` do `deploy.yml` de cada repositório | `~/.config/ricestat/repos.txt` |
 | `services` | GET HTTPS na raiz: status, latência, validade do certificado | `~/.config/ricestat/services.txt` |
 | `repos` | repositórios git locais sujos, à frente ou atrás do `origin` | `~/.config/ricestat/code-roots.txt` |
-| `focus` | janela ativa do Hyprland → projeto pelo diretório do processo | — |
+| `focus` | troca de janela pelo socket2 do Hyprland (duração exata por trecho), projeto pelo diretório do processo; tela bloqueada, suspensão e inatividade não contam | `hypridle.conf` (marca de inatividade) |
 
 Coletor que falha vira uma entrada em `errors` no snapshot e **não** derruba os
 outros. O widget mostra o motivo — zero silencioso é pior que um traço. Sem
